@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+	
+	<context:component-scan base-package="test" />
+	<bean id="aw" class="test.AppleWatch" />
+	
+
+<!-- 	
+	<bean id="tb" class="test.TestBean">
+		<property name="datas">
+			<list>
+				<value>서울시</value>
+				<value>서울시 관악구</value>
+				<value>사당역</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="phone" class="test.Iphone" p:watch-ref="aw" p:number="9890" />
+	
+	<bean id="galaxy2" class="test.Galaxy" lazy-init="true">
+		<constructor-arg ref="gw" />
+		<constructor-arg value="2번 배터리" />
+	</bean>
+	
+	<bean id="galaxy" class="test.Galaxy" lazy-init="true">
+		<property name="watch" ref="gw"/>
+		<property name="battery" value="1번 배터리" />
+	</bean>
+	
+	<bean id="galaxy3" class="test.Galaxy" lazy-init="true" p:watch-ref="ow" p:battery="3번 배터리" />
+
+	
+	<bean id="aw" class="test.AppleWatch"  lazy-init="true" />
+	<bean id="gw" class="test.GalaxyWatch"  lazy-init="true" />
+	<bean id="ow" class="test.OverWatch" lazy-init="true" />
+ -->	
+	
+</beans>
