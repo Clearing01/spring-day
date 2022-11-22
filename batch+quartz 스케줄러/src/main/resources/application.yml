@@ -10,3 +10,7 @@ spring:
       initialize-schema: "embedded"
 
       batch.job.enabled: false # CommandLineRunner 설정 해제 // 스케줄러를 사용하기 떄문에 구동시 동작 해제
+
+  jpa:
+    hibernate:
+      ddl-auto: none
