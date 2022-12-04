@@ -2,12 +2,13 @@ package com.example.batch.repository;
 
 import com.example.batch.entity.UserEntity;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
-@Component("JpaUserRepository")
+@Service("JpaUserRepository")
 public class JpaUserRepository implements UserRepository{
 
     private final EntityManager em;

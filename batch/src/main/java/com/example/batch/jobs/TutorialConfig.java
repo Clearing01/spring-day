@@ -38,17 +38,8 @@ public class TutorialConfig {
     @Bean
     public Step tutorialStep() {
 
-        UserEntity user = new UserEntity();
-        user.setPw("1234");
-        user.setName("1111");
-
-        System.out.println(user);
-        System.out.println(userRepository);
-
-        userRepository.save(user);
-
         return stepBuilderFactory.get("tutorialStep")
-                .tasklet(new TutorialTasklet()) // Tasklet 설정
+                .tasklet(new TutorialTasklet(userRepository)) // Tasklet 설정
                 .build();
     }
 }
